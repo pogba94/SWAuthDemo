@@ -1,0 +1,618 @@
+Dependencies for Project 'SWAuthDemo', Target 'iflash_lpcxpresso_1125': (DO NOT MODIFY !)
+F (..\..\..\..\startup_code\keil_startup_lpc112x.s)(0x54BD11D8)(--cpu Cortex-M0 -g --apcs=interwork --cpreproc-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "LPC1125 SETA 1" --pd "CORE_M0 SETA 1"--list .\listings\keil_startup_lpc112x.lst --xref -o .\keil_output\keil_startup_lpc112x.o --depend .\keil_output\keil_startup_lpc112x.d)
+F (.\..\..\..\..\startup_code\sysinit.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\sysinit.o --omf_browse .\keil_output\sysinit.crf --depend .\keil_output\sysinit.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\board_api.h)(0x54AA4E8E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+F (..\..\..\..\examples\periph\periph_blinky\readme.txt)(0x5B7D64D6)()
+F (.\SWAuthDemo.c)(0x5B855DA6)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\swauthdemo.o --omf_browse .\keil_output\swauthdemo.crf --depend .\keil_output\swauthdemo.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\board_api.h)(0x54AA4E8E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CRC16\lib_crc16.h)(0x5B7A3D90)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\Air202\Air202.h)(0x5B8559F1)
+F (.\CRC16\lib_crc16.h)(0x5B7A3D90)()
+F (.\CRC16\lib_crc16.c)(0x5AD944C9)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\lib_crc16.o --omf_browse .\keil_output\lib_crc16.crf --depend .\keil_output\lib_crc16.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (CRC16\lib_crc16.h)(0x5B7A3D90)
+F (.\Air202\Air202.c)(0x5B8559A1)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\air202.o --omf_browse .\keil_output\air202.crf --depend .\keil_output\air202.d)
+I (Air202\Air202.h)(0x5B8559F1)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\board_api.h)(0x54AA4E8E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+F (.\Air202\Air202.h)(0x5B8559F1)()
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\adc_112x.o --omf_browse .\keil_output\adc_112x.crf --depend .\keil_output\adc_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\chip_112x.o --omf_browse .\keil_output\chip_112x.crf --depend .\keil_output\chip_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\clock_112x.o --omf_browse .\keil_output\clock_112x.crf --depend .\keil_output\clock_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\gpio_112x.o --omf_browse .\keil_output\gpio_112x.crf --depend .\keil_output\gpio_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\i2c_112x.o --omf_browse .\keil_output\i2c_112x.crf --depend .\keil_output\i2c_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\i2cm_112x.o --omf_browse .\keil_output\i2cm_112x.crf --depend .\keil_output\i2cm_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\iocon_112x.o --omf_browse .\keil_output\iocon_112x.crf --depend .\keil_output\iocon_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\pmu_112x.o --omf_browse .\keil_output\pmu_112x.crf --depend .\keil_output\pmu_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\romdiv_112x.o --omf_browse .\keil_output\romdiv_112x.crf --depend .\keil_output\romdiv_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\ssp_112x.o --omf_browse .\keil_output\ssp_112x.crf --depend .\keil_output\ssp_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\syscon_112x.o --omf_browse .\keil_output\syscon_112x.crf --depend .\keil_output\syscon_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\sysinit_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\sysinit_112x.o --omf_browse .\keil_output\sysinit_112x.crf --depend .\keil_output\sysinit_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\timer_112x.o --omf_browse .\keil_output\timer_112x.crf --depend .\keil_output\timer_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.c)(0x5B7F823F)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\uart_112x.o --omf_browse .\keil_output\uart_112x.crf --depend .\keil_output\uart_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\wwdt_112x.o --omf_browse .\keil_output\wwdt_112x.crf --depend .\keil_output\wwdt_112x.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+F (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.c)(0x52F2D0AA)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\ring_buffer.o --omf_browse .\keil_output\ring_buffer.crf --depend .\keil_output\ring_buffer.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+F (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board.c)(0x5B7CD1D4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\board.o --omf_browse .\keil_output\board.crf --depend .\keil_output\board.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\board_api.h)(0x54AA4E8E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\retarget.h)(0x53701D84)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+F (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board_sysinit.c)(0x54BCB7C4)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork -I ..\..\..\..\..\..\software\CMSIS\CMSIS\Include -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x -I ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common -I ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125 -I .\CRC16 -I .\Air202-I.\RTE\_iflash_lpcxpresso_1125-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-D__UVISION_VERSION="523" -D_RTE_ -DLPC1125 -DCORE_M0-o .\keil_output\board_sysinit.o --omf_browse .\keil_output\board_sysinit.crf --depend .\keil_output\board_sysinit.d)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\chip.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x52F2D0AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x\sys_config.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\cmsis.h)(0x54BD11D8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cm0.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmInstr.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\CMSIS\CMSIS\Include\core_cmFunc.h)(0x52F2D0A8)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2c_common_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\i2cm_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\wwdt_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\uart_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x52F2D0AA)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\timer_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\adc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\pmu_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\fmc_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\ssp_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\iocon_112x.h)(0x5B7D042F)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\syscon_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\clock_112x.h)(0x5B7CC0E4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\gpio_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romapi_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\iap.h)(0x54C1D49E)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common\error.h)(0x541B7C6C)
+I (..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\romdiv_112x.h)(0x54BCB7C4)
+I (..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\board_api.h)(0x54AA4E8E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)

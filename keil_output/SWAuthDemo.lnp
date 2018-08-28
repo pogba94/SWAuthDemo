@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+".\keil_output\keil_startup_lpc112x.o"
+".\keil_output\sysinit.o"
+".\keil_output\swauthdemo.o"
+".\keil_output\lib_crc16.o"
+".\keil_output\air202.o"
+".\keil_output\adc_112x.o"
+".\keil_output\chip_112x.o"
+".\keil_output\clock_112x.o"
+".\keil_output\gpio_112x.o"
+".\keil_output\i2c_112x.o"
+".\keil_output\i2cm_112x.o"
+".\keil_output\iocon_112x.o"
+".\keil_output\pmu_112x.o"
+".\keil_output\romdiv_112x.o"
+".\keil_output\ssp_112x.o"
+".\keil_output\syscon_112x.o"
+".\keil_output\sysinit_112x.o"
+".\keil_output\timer_112x.o"
+".\keil_output\uart_112x.o"
+".\keil_output\wwdt_112x.o"
+".\keil_output\ring_buffer.o"
+".\keil_output\board.o"
+".\keil_output\board_sysinit.o"
+--strict --scatter ".\keil_output\SWAuthDemo.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\SWAuthDemo.map" -o .\keil_output\SWAuthDemo.axf
