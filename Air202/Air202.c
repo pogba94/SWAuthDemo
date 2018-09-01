@@ -11,16 +11,25 @@ extern char ATRXBuffer[];
 extern uint32_t tick_ct;
 
 const char* IPStatusList[IP_STATUS_MAX] = {"IP INITIAL","IP START","IP CONFIG","IP GPRSACT","IP STATUS","IP PROCESSING",
-"PDP DEACT","TCP CONNECTING","UDP CONNECTING","SERVER LISTENING","CONNECT OK","TCP CLOSING",
-"UDP CLOSING","TCP CLOSED","UDP CLOSED"};
+				"PDP DEACT","TCP CONNECTING","UDP CONNECTING","SERVER LISTENING","CONNECT OK","TCP CLOSING",
+				"UDP CLOSING","TCP CLOSED","UDP CLOSED"};
 
 char ATTXBuffer[AT_TX_BUF_SIZE];
 
-void delay_ms(uint32_t time)
+void delay_ms(uint32_t t)
 {
 	int i;
-	while(time--){
+	while(t--){
 		for(i=4800;i>0;i--)
+			__NOP();
+	}
+}
+
+void delay_us(uint32_t t)
+{
+	int i;
+	while(t--){
+		for(i=5;i>0;i--)
 			__NOP();
 	}
 }
@@ -128,6 +137,12 @@ int Air202_setAPN(char *apn)
 int Air202_setEcho(bool setting)
 {
 	sprintf(ATTXBuffer,"%s%d\r",ATE,setting);
+	return sendAndGet(ATTXBuffer,AT_OK,TIMEOUT_MS_1000);
+}
+
+int Air202_setIPHead(bool setting)
+{
+	sprintf(ATTXBuffer,"%s%d\r",AT_SET_IP_HEAD,setting);
 	return sendAndGet(ATTXBuffer,AT_OK,TIMEOUT_MS_1000);
 }
 

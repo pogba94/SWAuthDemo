@@ -71,6 +71,7 @@ enum ATTACH_STAT{
 #define    AT_ACTIVE_GPRS        "AT+CIICR\r"
 #define    AT_IP_START           "AT+CIPSTART="
 #define    AT_SET_APN            "AT+CSTT="
+#define    AT_SET_IP_HEAD        "AT+CIPHEAD="
 #define    AT_IP_CLOSE           "AT+IPCLOSE\r"
 #define    AT_SL_SEND            "AT+CIPSEND\r"
 #define    AT_IP_SHUT            "AT+CIPSHUT\r"
@@ -88,6 +89,7 @@ enum ATTACH_STAT{
 #define    AT_IP_CLOSE_RESP              "CLOSE OK"
 #define    AT_CHECK_SEND_SIZE_RESP       "+CIPSEND: "
 #define    AT_POWER_DOWN_RESP            "NORMAL POWER DOWN"
+#define    AT_IP_HEAD                    "+IPD,"      //Format: "+IPD,length:data"
 
 #define    TCP_PROTOCOL           "TCP"
 #define    UDP_PROTOCOL           "UDP"
@@ -113,6 +115,7 @@ int Air202_checkSendLimitSize(void);
 int Air202_getIPStatus(void);
 int Air202_activePDP(void);
 int Air202_setEcho(bool setting);
+int Air202_setIPHead(bool setting);
 int Air202_IPStart(const char *protocol,const char *ip,uint16_t port);
 int Air202_IPSend(const char *data, uint16_t size);
 int Air202_IPClose(void);

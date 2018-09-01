@@ -33,6 +33,7 @@
 #include "lib_crc16.h"
 #include "string.h"
 #include "Air202.h"
+#include "stdlib.h"
 
 /*****************************************************************************
  * Private types/enumerations/variables
@@ -49,16 +50,19 @@
 #define TICKRATE_HZ         (1000)	    /* 1000 ticks per second */
 #define UID_ADDR            (0xF000)
 #define UID_SIZE            (32)
-#define AUTH_PERIOD         (10*1000)   /* 10000 miniseconds */
+#define AUTH_PERIOD         (60*1000)   /* 10000 miniseconds */
 #define AT_UART_BAUDRATE    (115200)
 #define TX_RB_SIZE          (256)
-#define RX_RB_SIZE          (256)
+#define RX_RB_SIZE          (512)
+#define RECV_DATA_BUF_SIZE  (512)
 #define SQ_DEADLINE         (10)
 
 #define SERVER_IP           "orange.55555.io"
-#define SERVER_PORT         31318
-//#define SERVER_PORT         28581
-
+#if 1
+#define SERVER_PORT         31318  
+#else
+#define SERVER_PORT         28581 
+#endif
 
 enum GPRS_ERROR_CODE{
 	GPRS_SUCCESS = 0,
@@ -87,6 +91,8 @@ volatile uint32_t systemTimer = 0;
 RINGBUFF_T txring, rxring;
 char rxbuff[RX_RB_SIZE], txbuff[TX_RB_SIZE];
 char ATRXBuffer[AT_RX_BUF_SIZE];
+char recvDataBuffer[RECV_DATA_BUF_SIZE];
+
 const char *description = "SW Auth Demo\r\n";
 char *authStr = "authorization request\r\n";
 
@@ -110,7 +116,9 @@ int setupGPRS(void)
 	if(Air202_powerOn())
 		return GPRS_POWER_ON_FAIL;
 	delay_ms(3000);
-	if(Air202_setEcho(0))
+	if(Air202_setEcho(0))  //Disable echo
+		return GPRS_ERROR_OTHERS;
+	if(Air202_setIPHead(1)) //set ip head for recieving data
 		return GPRS_ERROR_OTHERS;
 	retry = 5;
 	while(retry--){
@@ -280,6 +288,42 @@ void setGPRSCtlPinStatu(bool val)
 	Chip_GPIO_SetPinState(LPC_GPIO,GPRS_CTL_PORT,GPRS_CTL_PIN,val);
 }
 
+
+int checkSockRecvData(void)
+{
+	int dataBytes = 0; //size of recieved 
+	int n,cnt;
+	char *pIPHead,*pData;
+	memset(ATRXBuffer,0,sizeof(ATRXBuffer)-1);
+	n = AT_Read(ATRXBuffer);
+	if(n<=0) //no data
+		return -1;
+	delay_ms(2);//wait for recieving data
+	n += AT_Read(ATRXBuffer+n);
+
+	pIPHead = strstr(ATRXBuffer,AT_IP_HEAD);
+	if(pIPHead == NULL)
+		return -2;
+	
+	pData = pIPHead;
+	pData += strlen(AT_IP_HEAD);
+	dataBytes = atoi(pData);
+	while(*pData++ != ':'){}
+	cnt = 30;
+	while((n-(pData-pIPHead)<dataBytes) && cnt--){//extra data isn't recieved
+			n += AT_Read(ATRXBuffer+n);
+			delay_ms(1);
+	}
+	if(n-(pData-pIPHead)<dataBytes){
+//		DEBUGOUT("n=%d,pHead=%x,pData=%x,cnt=%d\r\n",n,(int)pIPHead,(int)pData,cnt);
+		return -3;
+	}
+	memset(recvDataBuffer,0x0,sizeof(recvDataBuffer));
+	memcpy(recvDataBuffer,pData,dataBytes);
+	return dataBytes;
+}
+
+
 void test(void)
 {
 //	int signal;
@@ -289,6 +333,11 @@ void test(void)
 //	char ip[16];
 	int limitSize;
 	char str[] = "helloworld";
+	if(!Air202_ATInit())
+		DEBUGOUT("PASS\r\n");
+	else
+		DEBUGOUT("FAILED\r\n");
+	
 	//	signal = Air202_checkSignal();
 //  if(signal>0)
 //		DEBUGOUT("Get signal:%d\r\n",signal);
@@ -338,6 +387,7 @@ void test(void)
 int main(void)
 {
 	int ret;
+	int size;
 	
 	SystemCoreClockUpdate();
 	Board_Init();
@@ -355,6 +405,16 @@ int main(void)
 	}else{
 		DEBUGOUT("get uid failed\r\n");
 	}
+	
+	test();
+	
+//	while(1)
+//	{
+//		setGPRSCtlPinStatu(0);
+//		delay_ms(2000);
+//		setGPRSCtlPinStatu(1);
+//		delay_ms(2000);
+//	}
 	
 	ret = setupGPRS();
 	if(!ret){
@@ -382,6 +442,14 @@ int main(void)
 			}
 		}
 		#endif
+		
+		size = checkSockRecvData();
+		if(size >0){
+			DEBUGOUT("recieved %d bytes,%s\r\n",size,recvDataBuffer);
+		}else{
+			if(size==-3)
+				DEBUGOUT("Recieved error!\r\n");
+		}
 		
 		userApp();
 	}
