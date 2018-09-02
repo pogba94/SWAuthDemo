@@ -22,6 +22,7 @@
 ".\keil_output\ring_buffer.o"
 ".\keil_output\board.o"
 ".\keil_output\board_sysinit.o"
+".\keil_output\cjson.o"
 --strict --scatter ".\keil_output\SWAuthDemo.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

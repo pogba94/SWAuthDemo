@@ -22,22 +22,24 @@ Dialog DLL:      TARMCM1.DLL V1.12.0.0
  
 <h2>Project:</h2>
 E:\MCU-SDK\NXP\lpcopen_2_17_keil_iar_nxp_lpcxpresso_1125\applications\lpc112x\keil\nxp_lpcxpresso_1125\periph\SWAuthDemo\SWAuthDemo.uvprojx
-Project File Date:  08/22/2018
+Project File Date:  09/01/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'iflash_lpcxpresso_1125'
-compiling Air202.c...
-Air202\Air202.c(230): warning:  #177-D: variable "p"  was declared but never referenced
-  	int p = 0;
-Air202\Air202.c(75): warning:  #177-D: function "sendAndGetTimes"  was declared but never referenced
-  int sendAndGetTimes(const char *strSend,const char* exp,uint32_t timeout_ms,uint8_t n)
-Air202\Air202.c: 2 warnings, 0 errors
+compiling SWAuthDemo.c...
+SWAuthDemo.c(427): warning:  #177-D: variable "limitSize"  was declared but never referenced
+  	int limitSize;
+SWAuthDemo.c(428): warning:  #177-D: variable "str"  was declared but never referenced
+  	char str[] = "helloworld";
+SWAuthDemo.c(547): warning:  #111-D: statement is unreachable
+  	return 0;
+SWAuthDemo.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=7516 RO-data=1360 RW-data=88 ZI-data=2864  
+Program Size: Code=24924 RO-data=1852 RW-data=108 ZI-data=3116  
 FromELF: creating hex file...
 After Build - User command #1: C:\Keil_v5\ARM\ARMCC\bin\fromelf.exe  --bin -o ./keil_output/SWAuthDemo.bin ./keil_output/SWAuthDemo.axf
-".\keil_output\SWAuthDemo.axf" - 0 Error(s), 2 Warning(s).
+".\keil_output\SWAuthDemo.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +57,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.1
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

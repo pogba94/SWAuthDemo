@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>CORE_M0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\software\CMSIS\CMSIS\Include;..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x;..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x;..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common;..\..\..\..\..\..\software\lpc_core\lpc_board\board_common;..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125;.\CRC16;.\Air202</IncludePath>
+              <IncludePath>..\..\..\..\..\..\software\CMSIS\CMSIS\Include;..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x;..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_112x\config_112x;..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_common;..\..\..\..\..\..\software\lpc_core\lpc_board\board_common;..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125;.\CRC16;.\Air202;.\cJSON</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -528,6 +528,16 @@
               <FileName>board_sysinit.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\software\lpc_core\lpc_board\boards_112x\nxp_lpcxpresso_1125\board_sysinit.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>cJSON</GroupName>
+          <Files>
+            <File>
+              <FileName>cJSON.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\cJSON\cJSON.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,44 +1,22 @@
 /*
- * @brief Blinky example using sysTick
- *
- * @note
- * Copyright(C) NXP Semiconductors, 2013
- * All rights reserved.
- *
- * @par
- * Software that is described herein is for illustrative purposes only
- * which provides customers with programming information regarding the
- * LPC products.  This software is supplied "AS IS" without any warranties of
- * any kind, and NXP Semiconductors and its licensor disclaim any and
- * all warranties, express or implied, including all implied warranties of
- * merchantability, fitness for a particular purpose and non-infringement of
- * intellectual property rights.  NXP Semiconductors assumes no responsibility
- * or liability for the use of the software, conveys no license or rights under any
- * patent, copyright, mask work right, or any other intellectual property rights in
- * or to any products. NXP Semiconductors reserves the right to make changes
- * in the software without notification. NXP Semiconductors also makes no
- * representation or warranty that such application will be suitable for the
- * specified use without further testing or modification.
- *
- * @par
- * Permission to use, copy, modify, and distribute this software and its
- * documentation is hereby granted, under NXP Semiconductors' and its
- * licensor's relevant copyrights in the software, without fee, provided that it
- * is used in conjunction with NXP Semiconductors microcontrollers.  This
- * copyright, permission, and disclaimer notice must appear in all copies of
- * this code.
+ * @brief: sorfware authorization demo
  */
+
+/*****************************************************************************
+ * Header files 
+ ****************************************************************************/
 
 #include "board.h"
 #include "lib_crc16.h"
 #include "string.h"
 #include "Air202.h"
 #include "stdlib.h"
+#include "cJSON.h"
 
 /*****************************************************************************
- * Private types/enumerations/variables
+ * Macro definitions
  ****************************************************************************/
-#define AUTH_ENABLE                (1)
+#define AUTH_ENABLE         (1)
 
 #define GPRS_CTL_PORT       (3)
 #define GPRS_CTL_PIN        (3)
@@ -51,20 +29,29 @@
 #define UID_ADDR            (0xF000)
 #define UID_SIZE            (32)
 #define AUTH_PERIOD         (60*1000)   /* 10000 miniseconds */
+#define AUTH_TIMEOUT_S      (15)   
 #define AT_UART_BAUDRATE    (115200)
 #define TX_RB_SIZE          (256)
 #define RX_RB_SIZE          (512)
-#define RECV_DATA_BUF_SIZE  (512)
 #define SQ_DEADLINE         (10)
+#define SOCK_IN_BUF_SIZE    (512)
+#define SOCK_OUT_BUF_SIZE   (256)
 
 #define SERVER_IP           "orange.55555.io"
 #if 1
-#define SERVER_PORT         31318  
+	#define SERVER_PORT       31318  
 #else
-#define SERVER_PORT         28581 
+	#define SERVER_PORT       28581 
 #endif
 
-enum GPRS_ERROR_CODE{
+#define  AUTH_REQ_PACK      "{\"apiId\":%d,\"UID\":\"%s\"}"
+#define  ATUH_API_ID        1
+
+/*****************************************************************************
+ * Public types/enumerations/variables
+ ****************************************************************************/
+ 
+ enum GPRS_ERROR_CODE{
 	GPRS_SUCCESS = 0,
 	GPRS_POWER_ON_FAIL = -1,
 	GPRS_SIM_NOT_READY = -2,
@@ -78,35 +65,90 @@ enum GPRS_ERROR_CODE{
 	GPRS_SEND_FAILED = -10,
 	GPRS_ERROR_OTHERS = -99,
 };
+ 
+enum RESP_CODE{
+	RESP_CODE_SUCCESS = 100,
+	RESP_CODE_ERROR = 4,
+};
 
-/*****************************************************************************
- * Public types/enumerations/variables
- ****************************************************************************/
-char uid[36];   /* 32 bytes uid */
-bool authReqFlag = false;
+enum AUTH_STATUS{
+	AUTH_STATUS_SUCCESS,
+	AUTH_STATUS_FAIL,
+	AUTH_STATUS_AUTHORIZING,
+}AUTH_STATUS_T;
+
+typedef struct SOCKET_BUFFER{
+	char inBuffer[SOCK_IN_BUF_SIZE];
+	char outBuffer[SOCK_OUT_BUF_SIZE];
+}SOCKET_BUFFER_T;
+
+typedef struct AUTH_INFO{
+	int status; 
+	bool authFlag;
+	bool firstAuthFlag;
+	int authTime;
+}AUTH_INFO_T;
+
 bool ledToggleFlag = false;
-
+char uid[36];   /* 32 bytes uid */
 volatile uint32_t tick_ct = 0;
 volatile uint32_t systemTimer = 0;
 RINGBUFF_T txring, rxring;
+SOCKET_BUFFER_T socketBuffer;
+AUTH_INFO_T authInfo = {AUTH_STATUS_FAIL,false,true};
 char rxbuff[RX_RB_SIZE], txbuff[TX_RB_SIZE];
 char ATRXBuffer[AT_RX_BUF_SIZE];
-char recvDataBuffer[RECV_DATA_BUF_SIZE];
-
 const char *description = "SW Auth Demo\r\n";
 char *authStr = "authorization request\r\n";
 
-uint32_t tick_tmp;
+/*****************************************************************************
+ * Extern functions
+ ****************************************************************************/
 extern void delay_ms(uint32_t time);
-//uint32_t tick_tmp;
-/*****************************************************************************
- * Private functions
- ****************************************************************************/
 
 /*****************************************************************************
- * Public functions
+ * Functions 
  ****************************************************************************/
 
+/**
+ * @brief	Handle interrupt from SysTick timer
+ * @return	Nothing
+ */
+void SysTick_Handler(void)
+{
+	if ((tick_ct % 1000) == 0) {
+		systemTimer++;
+		if(authInfo.status == AUTH_STATUS_AUTHORIZING){
+			authInfo.authTime++;
+			if(authInfo.authTime > AUTH_TIMEOUT_S){
+				authInfo.status = AUTH_STATUS_FAIL;
+			}
+		}
+	}
+	if(tick_ct % 500 == 0){
+		ledToggleFlag = true;
+	}
+	#if AUTH_ENABLE
+	if((tick_ct % AUTH_PERIOD) == 0){
+		authInfo.authFlag = true;
+	}
+	#endif
+	tick_ct++;
+}
+
+/**
+ * @brief	Handle interrupt from UART2
+ * @return	Nothing
+ */
+void UART2_IRQHandler(void)
+{
+	Chip_UART_IRQRBHandler(AT_UART,&rxring,&txring);
+}
+
+/**
+ * @brief	  setup GPRS module
+ * @return  return 0 if read successfully ,otherwise, return nagative value
+*/
 int setupGPRS(void)
 {
 	int signal;
@@ -116,12 +158,22 @@ int setupGPRS(void)
 	if(Air202_powerOn())
 		return GPRS_POWER_ON_FAIL;
 	delay_ms(3000);
-	if(Air202_setEcho(0))  //Disable echo
-		return GPRS_ERROR_OTHERS;
-	if(Air202_setIPHead(1)) //set ip head for recieving data
+	retry = 5;
+	while(--retry){
+	if(!Air202_setEcho(0))  //Disable echo
+		break;
+	}
+	if(retry==0)
 		return GPRS_ERROR_OTHERS;
 	retry = 5;
-	while(retry--){
+	while(--retry){
+	if(!Air202_setIPHead(1)) //set ip head for recieving data
+		break;
+	}
+	if(retry == 0)
+		return GPRS_ERROR_OTHERS;
+	retry = 5;
+	while(--retry){
 		if(!Air202_checkPIN())
 			break;	
 	}
@@ -131,7 +183,7 @@ int setupGPRS(void)
 	if(signal < SQ_DEADLINE)
 		return GPRS_SIGNAL_POOR;
 	retry = 5;
-	while(retry--){
+	while(--retry){
 		if(Air202_checkAttach() == ATTACHED)
 			break;
 	}
@@ -149,6 +201,10 @@ int setupGPRS(void)
 	return GPRS_SUCCESS;
 }
 
+/**
+ * @brief	
+ * @return	
+ */
 int authorization(void)
 {
 	char txt[] = "authorization request\r\n";
@@ -159,38 +215,8 @@ int authorization(void)
 	return RET_CODE_SUCCESS;
 }
 
-
 /**
- * @brief	Handle interrupt from SysTick timer
- * @return	Nothing
- */
-
-void SysTick_Handler(void)
-{
-	if ((tick_ct % 1000) == 0) {
-		ledToggleFlag = true;
-		systemTimer++;
-	}
-	#if AUTH_ENABLE
-	if((tick_ct % AUTH_PERIOD) == 0){
-		authReqFlag = true;
-	}
-	#endif
-	tick_ct++;
-}
-
-/**
- * @brief	Handle interrupt from UART2
- * @return	Nothing
- */
-void UART2_IRQHandler(void)
-{
-	Chip_UART_IRQRBHandler(AT_UART,&rxring,&txring);
-}
-
-
-/**
- * @brief	User application
+ * @brief	  User application
  * @return	Nothing
  */
 
@@ -201,6 +227,11 @@ void userApp(void)
 		Board_LED_Toggle(LED_USED);
 	}
 }
+
+/**
+ * @brief	 Read UID from flash
+ * @return return 0 if read successfully ,otherwise, return nagative value
+ */
 
 int getUID(const char* uid_addr,char *uid_data)
 {
@@ -220,22 +251,22 @@ int getUID(const char* uid_addr,char *uid_data)
 }
 
 /**
- * @brief	
- * @return
+ * @brief	  setup specified UART
+ * @return  nothing
  */
 static void setupUART(LPC_UART_T *pUART,uint32_t baudrate)
 {
 	LPC1125_IRQn_Type IRQn;
 	/* pin configure */
 	if(pUART == LPC_UART0){
-		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_6, (IOCON_FUNC1 | IOCON_MODE_INACT)); /* RXD */
-		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_7, (IOCON_FUNC1 | IOCON_MODE_INACT)); /* TXD */	
+		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_6, (IOCON_FUNC1 | IOCON_MODE_PULLUP)); /* RXD */
+		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_7, (IOCON_FUNC1 | IOCON_MODE_PULLUP)); /* TXD */	
 	}else if(pUART == LPC_UART1){
-		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_7, (IOCON_FUNC3 | IOCON_MODE_INACT)); /* RXD */
-		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_6, (IOCON_FUNC3 | IOCON_MODE_INACT)); /* TXD */	
+		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_7, (IOCON_FUNC3 | IOCON_MODE_PULLUP)); /* RXD */
+		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_6, (IOCON_FUNC3 | IOCON_MODE_PULLUP)); /* TXD */	
 	}else if(pUART == LPC_UART2){
-		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_3, (IOCON_FUNC3 | IOCON_MODE_INACT)); /* RXD */
-		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_8, (IOCON_FUNC3 | IOCON_MODE_INACT)); /* TXD */	
+		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_3, (IOCON_FUNC3 | IOCON_MODE_PULLUP)); /* RXD */
+		Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_8, (IOCON_FUNC3 | IOCON_MODE_PULLUP)); /* TXD */	
 	}else{
 		return;
 	}
@@ -261,10 +292,19 @@ static void setupUART(LPC_UART_T *pUART,uint32_t baudrate)
 	NVIC_EnableIRQ(IRQn);
 }
 
+/**
+ * @brief	  send data to ringbuffer
+ * @return  bytes sent actually
+ */
 int AT_Send(const char *str,int size)
 {
    return Chip_UART_SendRB(AT_UART,&txring,str,size);
 }
+
+/**
+ * @brief	  read out the recieved data form ringbuffer
+ * @return  bytes recieved actually
+ */
 
 int AT_Read(char *str)
 {
@@ -276,6 +316,11 @@ int AT_Read(char *str)
 	}
 }
 
+/**
+ * @brief	  initialize GPIO
+ * @return  nothing
+ */
+
 void GPIO_Init(void)
 {
 	//PIO3_3,Output high at default
@@ -283,12 +328,20 @@ void GPIO_Init(void)
 	Chip_GPIO_SetPinState(LPC_GPIO,GPRS_CTL_PORT,GPRS_CTL_PIN,1); //set high as default
 }
 
+/**
+ * @brief	  setting the output level of specified pin 
+ * @return  nothing
+ */
+
 void setGPRSCtlPinStatu(bool val)
 {
 	Chip_GPIO_SetPinState(LPC_GPIO,GPRS_CTL_PORT,GPRS_CTL_PIN,val);
 }
 
-
+/**
+ * @brief	  check if recieved data from server
+ * @return  return 0 if recieved data from server,otherwise,return nagative value
+ */
 int checkSockRecvData(void)
 {
 	int dataBytes = 0; //size of recieved 
@@ -318,12 +371,52 @@ int checkSockRecvData(void)
 //		DEBUGOUT("n=%d,pHead=%x,pData=%x,cnt=%d\r\n",n,(int)pIPHead,(int)pData,cnt);
 		return -3;
 	}
-	memset(recvDataBuffer,0x0,sizeof(recvDataBuffer));
-	memcpy(recvDataBuffer,pData,dataBytes);
+	memset(socketBuffer.inBuffer,0x0,sizeof(socketBuffer.inBuffer));
+	memcpy(socketBuffer.inBuffer,pData,dataBytes);
 	return dataBytes;
 }
 
+/**
+ * @brief	  parse recieved data
+ * @return  nothing
+ */
+void parseRecvData(const char *txt)
+{
+	int respCode;
+	int apiId;
+	cJSON *json = cJSON_Parse(txt);
+	if(!json){
+		DEBUGOUT("no json format\r\n");
+		return;
+	}
+	if(cJSON_GetObjectItem(json,"apiId") == NULL || cJSON_GetObjectItem(json,"respCode") == NULL){
+		DEBUGOUT("lack of item!\r\n");
+		return;
+	}
+	apiId = cJSON_GetObjectItem(json,"apiId")->valueint;
+	respCode = cJSON_GetObjectItem(json,"respCode")->valueint;
+	DEBUGOUT("apiId:%d,respCode:%d\r\n",apiId,respCode);
+	if(apiId == ATUH_API_ID && respCode == RESP_CODE_SUCCESS){
+		if(authInfo.status == AUTH_STATUS_AUTHORIZING && authInfo.authTime < AUTH_TIMEOUT_S){
+			authInfo.status = AUTH_STATUS_SUCCESS;
+			if(authInfo.firstAuthFlag == true)
+				authInfo.firstAuthFlag = false;
+			DEBUGOUT("Authorization pass\r\n");
+		}else{
+			DEBUGOUT("Authorization error\r\n");
+		}
+	}else{
+		authInfo.status = AUTH_STATUS_FAIL;
+		DEBUGOUT("Authorization failed\r\n");
+	}
+	cJSON_Delete(json); //take care!
+}
 
+
+/**
+ * @brief	  test function
+ * @return  nothing
+ */
 void test(void)
 {
 //	int signal;
@@ -381,8 +474,8 @@ void test(void)
 }
 
 /**
- * @brief	main routine for blinky example
- * @return	Function should not exit.
+ * @brief	  main function
+ * @return	should be never return
  */
 int main(void)
 {
@@ -406,15 +499,7 @@ int main(void)
 		DEBUGOUT("get uid failed\r\n");
 	}
 	
-	test();
-	
-//	while(1)
-//	{
-//		setGPRSCtlPinStatu(0);
-//		delay_ms(2000);
-//		setGPRSCtlPinStatu(1);
-//		delay_ms(2000);
-//	}
+//	test();
 	
 	ret = setupGPRS();
 	if(!ret){
@@ -432,11 +517,14 @@ int main(void)
 	
 	while (1){
 		#if AUTH_ENABLE
-		if(authReqFlag == true){
-			DEBUGOUT("start to authorize!\r\n");
-			authReqFlag = false;
-			if(!Air202_IPSend(authStr,strlen(authStr))){
-				DEBUGOUT("Send successfully\r\n");
+		if(authInfo.authFlag == true){
+			DEBUGOUT("Authorizing...!\r\n");
+			authInfo.authFlag = false;
+			authInfo.status = AUTH_STATUS_AUTHORIZING;
+			authInfo.authTime = 0;
+			sprintf(socketBuffer.outBuffer,AUTH_REQ_PACK,ATUH_API_ID,uid);
+			if(!Air202_IPSend(socketBuffer.outBuffer,strlen(socketBuffer.outBuffer))){
+				DEBUGOUT("Send: %s\r\n",socketBuffer.outBuffer);
 			}else{
 				DEBUGOUT("Send failed\r\n");
 			}
@@ -445,12 +533,16 @@ int main(void)
 		
 		size = checkSockRecvData();
 		if(size >0){
-			DEBUGOUT("recieved %d bytes,%s\r\n",size,recvDataBuffer);
+			DEBUGOUT("recieved %d bytes,%s\r\n",size,socketBuffer.inBuffer);
+			parseRecvData(socketBuffer.inBuffer);
 		}else{
 			if(size==-3)
 				DEBUGOUT("Recieved error!\r\n");
 		}
 		
-		userApp();
+		if(authInfo.status != AUTH_STATUS_FAIL && authInfo.firstAuthFlag == false){
+			userApp();
+		}
 	}
+	return 0;
 }
